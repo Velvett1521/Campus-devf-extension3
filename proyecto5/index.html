@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Registro de Asistentes</h1>
+            <p>Complete el formulario para inscribirse al evento</p>
+        </div>
+
+        <form id="form_registro" class="form-registro">
+            <div class="form-section">
+                <h2>Informacion Personal</h2>
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Perez Gonzalez">
+                    <span class="error-message" id="error_nombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electronico *</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com">
+                    <span class="error-message" id="error_email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono *</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 5551234567">
+                    <span class="error-message" id="error_telefono"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad *</label>
+                    <input type="number" id="edad" name="edad" min="18" max="99" placeholder="18">
+                    <span class="error-message" id="error_edad"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha_evento">Fecha del Evento *</label>
+                    <input type="date" id="fecha_evento" name="fecha_evento">
+                    <span class="error-message" id="error_fecha"></span>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Intereses</h2>
+                <div class="check-group">
+                    <label class="check-label">
+                        <input type="checkbox" name="intereses" value="tecnologia">
+                        Tecnologia
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="intereses" value="negocios">
+                        Negocios
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="intereses" value="marketing">
+                        Marketing
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="intereses" value="diseno">
+                        Diseño
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="intereses" value="innovacion">
+                        Innovacion
+                    </label>
+                </div>
+                <span class="error-message" id="error_intereses"></span>
+            </div>
+
+            <div class="form-section">
+                <h2>Horario Preferido</h2>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="horario" value="matutino">
+                        Matutino (9:00 - 13:00)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="horario" value="vespertino">
+                        Vespertino (14:00 - 18:00)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="horario" value="completo">
+                        Completo (9:00 - 18:00)
+                    </label>
+                </div>
+                <span class="error-message" id="error_horario"></span>
+            </div>
+
+            <div class="form-section">
+                <h2>Documentos Adicionales</h2>
+                <div class="form-group">
+                    <label for="identificacion">Identificacion (Opcional)</label>
+                    <input type="file" id="identificacion" name="identificacion" accept=".pdf,.jpg,.png">
+                    <small>Formatos permitidos: PDF, JPG, PNG (Max 5MB)</small>
+                    <span class="error-message" id="error_archivo"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">Comentarios Adicionales</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Alguna observacion o requerimiento especial..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="btn_limpiar" class="btn btn-secundario">Limpiar Formulario</button>
+                <button type="submit" class="btn btn-primario">Registrarse</button>
+            </div>
+        </form>
+
+        <div id="modal_exito" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h2>Registro Exitoso</h2>
+                <div id="resumen_registro"></div>
+                <button class="btn btn-primario" id="modal_cerrar">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="formulario.js"></script>
+</body>
+</html>
