@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Cafeteria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-agregar {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-agregar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-agregar:active {
+            transform: translateY(0);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .pedidos-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .pedidos-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: 15px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .pedido-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .pedido-id {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .pedido-estado {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .estado-proceso {
+            background-color: #ffeaa7;
+            color: #d63031;
+        }
+
+        .estado-completado {
+            background-color: #55efc4;
+            color: #006266;
+        }
+
+        .pedido-tiempo {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 1.1em;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #d63031;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cafeteria Asincronica</h1>
+        <div class="subtitle">Simulacion del Event Loop - Pedidos en tiempo real</div>
+
+        <div class="controls">
+            <button class="btn-agregar" id="btn_agregar_pedido">
+                Nuevo Pedido
+            </button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Pedidos</h3>
+                <div class="stat-number" id="total_pedidos">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>En Proceso</h3>
+                <div class="stat-number" id="en_proceso">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Completados</h3>
+                <div class="stat-number" id="completados">0</div>
+            </div>
+        </div>
+
+        <div class="pedidos-container">
+            <div class="pedidos-header">
+                <div>ID Pedido</div>
+                <div>Estado</div>
+                <div>Tiempo Preparacion</div>
+            </div>
+            <div id="lista_pedidos">
+                <div class="empty-message">
+                    No hay pedidos aun. Agrega tu primer pedido
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cafeteria.js"></script>
+</body>
+</html>
