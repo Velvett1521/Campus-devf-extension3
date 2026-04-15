@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivina el Numero</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Adivina el Numero</h1>
+      <p>Estoy pensando en un numero entre 1 y 100</p>
+    </header>
+
+    <main>
+      <div class="game-stats">
+        <div class="stat-card">
+          <span class="stat-label">Intentos</span>
+          <span class="stat-value" id="intentos">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Mejor Racha</span>
+          <span class="stat-value" id="mejor_racha">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Rango</span>
+          <span class="stat-value" id="rango">1 - 100</span>
+        </div>
+      </div>
+
+      <div class="game-area">
+        <div class="message-box">
+          <p id="mensaje">Ingresa un numero para comenzar</p>
+          <p id="pista" class="pista"></p>
+        </div>
+
+        <div class="input-area">
+          <input type="number" id="input_numero" placeholder="Ingresa un numero" min="1" max="100">
+          <button id="btn_adivinar">Adivinar</button>
+        </div>
+
+        <div class="history-area">
+          <h3>Historial de Intentos</h3>
+          <ul id="historial_lista"></ul>
+        </div>
+
+        <div class="control-buttons">
+          <button id="btn_nuevo_juego" class="btn-secondary">Nuevo Juego</button>
+          <button id="btn_dificultad" class="btn-secondary">Cambiar Dificultad</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Desarrollado con Vite y Vanilla JS</p>
+    </footer>
+  </div>
+
+  <div id="modal_dificultad" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Selecciona la Dificultad</h2>
+      <div class="dificultad-opciones">
+        <button class="dificultad-btn" data-dificultad="facil">Facil (1-50)</button>
+        <button class="dificultad-btn" data-dificultad="normal">Normal (1-100)</button>
+        <button class="dificultad-btn" data-dificultad="dificil">Dificil (1-200)</button>
+        <button class="dificultad-btn" data-dificultad="experto">Experto (1-500)</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

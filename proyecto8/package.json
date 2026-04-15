@@ -1,0 +1,18 @@
+{
+  "name": "adivina-el-numero",
+  "version": "1.0.0",
+  "description": "Juego de adivinar el numero con Vite",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  },
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,6 @@
+# Crear el proyecto
+npm init -y
+npm install vite --save-dev
+
+# Ejecutar
+npm run dev
