@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mercurio",
+    "tipo": "Rocoso",
+    "distancia_sol": "57.9 millones km",
+    "diametro": "4,879 km",
+    "lunas": 0,
+    "descripcion": "El planeta mas cercano al Sol",
+    "favorito": true
+  },
+  {
+    "id": 2,
+    "nombre": "Venus",
+    "tipo": "Rocoso",
+    "distancia_sol": "108.2 millones km",
+    "diametro": "12,104 km",
+    "lunas": 0,
+    "descripcion": "El planeta mas caliente del sistema solar",
+    "favorito": true
+  },
+  {
+    "id": 3,
+    "nombre": "Tierra",
+    "tipo": "Rocoso",
+    "distancia_sol": "149.6 millones km",
+    "diametro": "12,742 km",
+    "lunas": 1,
+    "descripcion": "Nuestro hogar, el unico con vida conocida",
+    "favorito": true
+  },
+  {
+    "id": 4,
+    "nombre": "Marte",
+    "tipo": "Rocoso",
+    "distancia_sol": "227.9 millones km",
+    "diametro": "6,779 km",
+    "lunas": 2,
+    "descripcion": "El planeta rojo, objetivo de exploracion espacial",
+    "favorito": true
+  },
+  {
+    "id": 5,
+    "nombre": "Jupiter",
+    "tipo": "Gaseoso",
+    "distancia_sol": "778.5 millones km",
+    "diametro": "139,820 km",
+    "lunas": 79,
+    "descripcion": "El planeta mas grande del sistema solar",
+    "favorito": true
+  },
+  {
+    "id": 6,
+    "nombre": "Saturno",
+    "tipo": "Gaseoso",
+    "distancia_sol": "1,434 millones km",
+    "diametro": "116,460 km",
+    "lunas": 82,
+    "descripcion": "Famoso por sus anillos",
+    "favorito": true
+  },
+  {
+    "id": 7,
+    "nombre": "Urano",
+    "tipo": "Hielo",
+    "distancia_sol": "2,871 millones km",
+    "diametro": "50,724 km",
+    "lunas": 27,
+    "descripcion": "Gira de lado",
+    "favorito": true
+  },
+  {
+    "id": 8,
+    "nombre": "Neptuno",
+    "tipo": "Hielo",
+    "distancia_sol": "4,495 millones km",
+    "diametro": "49,244 km",
+    "lunas": 14,
+    "descripcion": "El planeta mas ventoso",
+    "favorito": true
+  },
+  {
+    "id": 9,
+    "nombre": "Pluton",
+    "tipo": "Desconocido",
+    "distancia_sol": "Por determinar",
+    "diametro": "Por determinar",
+    "lunas": 0,
+    "descripcion": "Planeta descubierto recientemente",
+    "favorito": true
+  }
+]

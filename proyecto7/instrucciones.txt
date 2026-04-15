@@ -1,0 +1,17 @@
+# Instalar dependencias
+npm install
+
+# Iniciar la aplicacion
+npm start
+
+# Listar planetas favoritos
+npm run listar
+
+# Agregar un planeta nuevo
+npm run agregar -- Pluton
+
+# Ver informacion de un planeta
+npm run info -- Marte
+
+# Ver ayuda
+npm run help

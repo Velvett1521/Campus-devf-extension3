@@ -1,0 +1,22 @@
+{
+  "name": "proyecto_planetas",
+  "version": "1.0.0",
+  "description": "Taller de Node.js para registrar planetas favoritos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "listar": "node index.js listar",
+    "agregar": "node index.js agregar",
+    "info": "node index.js info",
+    "help": "node index.js help"
+  },
+  "keywords": ["planetas", "nodejs", "taller", "npm"],
+  "author": "Explorador Espacial",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0"
+  },
+  "type": "module"
+}
