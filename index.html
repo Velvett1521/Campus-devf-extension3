@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Proyectos - DEV.F</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="titulo">Mis Proyectos</h1>
+      <p class="subtitulo">Galeria de proyectos desarrollados durante el curso</p>
+      <div class="decoracion"></div>
+    </header>
+
+    <div class="filtros">
+      <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+      <button class="filtro-btn" data-filtro="frontend">Frontend</button>
+      <button class="filtro-btn" data-filtro="asincronia">Asincronia</button>
+      <button class="filtro-btn" data-filtro="formularios">Formularios</button>
+      <button class="filtro-btn" data-filtro="api">API</button>
+      <button class="filtro-btn" data-filtro="juego">Juego</button>
+      <button class="filtro-btn" data-filtro="nodejs">Node.js</button>
+    </div>
+
+    <div class="grid-proyectos" id="grid_proyectos">
+      <!-- Proyecto 1 -->
+      <div class="tarjeta" data-categoria="asincronia">
+        <div class="tarjeta-header">
+          <span class="badge">JavaScript</span>
+          <span class="numero">01</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Cafeteria Asincronica</h2>
+          <p class="proyecto-descripcion">Simulador de pedidos de cafeteria usando Event Loop, setTimeout, Promises y async/await.</p>
+          <div class="tecnologias">
+            <span class="tech">HTML5</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">JavaScript</span>
+            <span class="tech">Promises</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="Proyecto1/index.html" class="btn btn-demo" target="_blank">Ver Demo</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('Proyecto1')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="tarjeta" data-categoria="frontend">
+        <div class="tarjeta-header">
+          <span class="badge">JavaScript</span>
+          <span class="numero">02</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Biblioteca Virtual</h2>
+          <p class="proyecto-descripcion">Sistema de gestion de biblioteca con JSON y callbacks para operaciones asincronas.</p>
+          <div class="tecnologias">
+            <span class="tech">HTML5</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">JavaScript</span>
+            <span class="tech">JSON</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="../proyecto2/index.html" class="btn btn-demo" target="_blank">Ver Demo</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto2')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="tarjeta" data-categoria="api">
+        <div class="tarjeta-header">
+          <span class="badge">API</span>
+          <span class="numero">03</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Rick & Morty API</h2>
+          <p class="proyecto-descripcion">Consumo de API de Rick and Morty usando Fetch y Axios. Comparativa entre ambas herramientas.</p>
+          <div class="tecnologias">
+            <span class="tech">HTML5</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">Fetch</span>
+            <span class="tech">Axios</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="../proyecto3/index.html" class="btn btn-demo" target="_blank">Ver Demo</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto3')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 4 -->
+      <div class="tarjeta" data-categoria="asincronia">
+        <div class="tarjeta-header">
+          <span class="badge">JavaScript</span>
+          <span class="numero">04</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Sistema de Reservas</h2>
+          <p class="proyecto-descripcion">Restaurante con sistema de reservas usando Promesas y Async/Await con manejo de errores.</p>
+          <div class="tecnologias">
+            <span class="tech">HTML5</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">Promises</span>
+            <span class="tech">Async/Await</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="../proyecto4/index.html" class="btn btn-demo" target="_blank">Ver Demo</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto4')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 5 -->
+      <div class="tarjeta" data-categoria="formularios">
+        <div class="tarjeta-header">
+          <span class="badge">Formularios</span>
+          <span class="numero">05</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Registro de Eventos</h2>
+          <p class="proyecto-descripcion">Formulario completo con validaciones, manejo de archivos y almacenamiento local.</p>
+          <div class="tecnologias">
+            <span class="tech">HTML5</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">JavaScript</span>
+            <span class="tech">LocalStorage</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="../proyecto5/index.html" class="btn btn-demo" target="_blank">Ver Demo</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto5')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 6 -->
+      <div class="tarjeta" data-categoria="formularios">
+        <div class="tarjeta-header">
+          <span class="badge">Zod</span>
+          <span class="numero">06</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Validacion con Zod</h2>
+          <p class="proyecto-descripcion">Formulario de registro con validaciones en tiempo real usando la libreria Zod.</p>
+          <div class="tecnologias">
+            <span class="tech">HTML5</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">Zod</span>
+            <span class="tech">JavaScript</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="../proyecto6/index.html" class="btn btn-demo" target="_blank">Ver Demo</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto6')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 7 - Node.js -->
+      <div class="tarjeta" data-categoria="nodejs">
+        <div class="tarjeta-header">
+          <span class="badge">Node.js</span>
+          <span class="numero">07</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Explorador de Planetas</h2>
+          <p class="proyecto-descripcion">Aplicacion CLI para explorar el sistema solar. Registra y consulta planetas favoritos desde la terminal.</p>
+          <div class="tecnologias">
+            <span class="tech">Node.js</span>
+            <span class="tech">npm</span>
+            <span class="tech">Chalk</span>
+            <span class="tech">Figlet</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="#" class="btn btn-demo btn-demo-node" onclick="mostrarInstruccionesNode()">Ver Instrucciones</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto7')">Ver Codigo</a>
+        </div>
+      </div>
+
+      <!-- Proyecto 8 -->
+      <div class="tarjeta" data-categoria="juego">
+        <div class="tarjeta-header">
+          <span class="badge">Vite</span>
+          <span class="numero">08</span>
+        </div>
+        <div class="tarjeta-body">
+          <h2 class="proyecto-titulo">Adivina el Numero</h2>
+          <p class="proyecto-descripcion">Juego interactivo con Vite. Adivina el numero con diferentes niveles de dificultad.</p>
+          <div class="tecnologias">
+            <span class="tech">Vite</span>
+            <span class="tech">CSS3</span>
+            <span class="tech">ES Modules</span>
+            <span class="tech">JavaScript</span>
+          </div>
+        </div>
+        <div class="tarjeta-footer">
+          <a href="#" class="btn btn-demo btn-demo-node" onclick="mostrarInstruccionesNode()">Ver Instrucciones</a>
+          <a href="#" class="btn btn-codigo" onclick="verCodigo('proyecto8')">Ver Codigo</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Desarrollado con 💻 durante el curso de JavaScript Avanzado</p>
+      <p class="footer-small">DEV.F - Proyectos de aprendizaje</p>
+    </footer>
+  </div>
+
+  <div id="modal_codigo" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Codigo del Proyecto</h2>
+      <div id="modal_body"></div>
+    </div>
+  </div>
+
+  <div id="modal_node" class="modal">
+    <div class="modal-content">
+      <span class="modal-close-node">&times;</span>
+      <h2>Proyecto Node.js - Explorador de Planetas</h2>
+      <div id="modal_node_body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
