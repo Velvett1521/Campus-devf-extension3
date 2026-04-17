@@ -2,43 +2,43 @@ const proyectos_info = {
   Proyecto1: {
     nombre: 'Cafeteria Asincronica',
     archivos: ['index.html', 'cafeteria.js'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/Proyecto1'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/Proyecto1'
   },
   proyecto2: {
     nombre: 'Biblioteca Virtual',
     archivos: ['index.html', 'biblioteca.js'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto2'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto2'
   },
   proyecto3: {
     nombre: 'Rick & Morty API',
     archivos: ['index.html', 'app.js'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto3'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto3'
   },
   proyecto4: {
     nombre: 'Sistema de Reservas',
     archivos: ['index.html', 'reservas.js'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto4'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto4'
   },
   proyecto5: {
     nombre: 'Registro de Eventos',
     archivos: ['index.html', 'formulario.js', 'styles.css'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto5'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto5'
   },
   proyecto6: {
     nombre: 'Validacion con Zod',
     archivos: ['index.html', 'validacion.js'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto6'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto6'
   },
   proyecto7: {
     nombre: 'Explorador de Planetas',
     archivos: ['index.js', 'planetas.js', 'utils/helpers.js', 'datos/planetas.json', 'package.json'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto7',
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto7',
     es_node: true
   },
   proyecto8: {
     nombre: 'Adivina el Numero',
     archivos: ['index.html', 'src/main.js', 'src/style.css', 'src/modules/'],
-    repo: 'https://github.com/tu-usuario/proyectos/tree/main/proyecto8'
+    repo: 'https://github.com/Velvett1521/Campus-devf-extension3/tree/main/proyecto8'
   }
 };
 
